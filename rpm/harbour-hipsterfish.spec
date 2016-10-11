@@ -20,6 +20,7 @@ License:    LICENSE
 URL:        http://example.org/
 Source0:    %{name}-%{version}.tar.bz2
 Source100:  harbour-hipsterfish.yaml
+Patch0:     harbour-hipsterfish.patch
 Requires:   sailfishsilica-qt5 >= 0.10.9
 BuildRequires:  pkgconfig(sailfishapp) >= 1.0.2
 BuildRequires:  pkgconfig(Qt5Core)
@@ -34,6 +35,7 @@ Short description of my SailfishOS Application
 
 %prep
 %setup -q -n %{name}-%{version}
+%patch0
 
 # >> setup
 # << setup
